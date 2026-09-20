@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マヌカハニーと、迎える季節。| マヌカハニー グリーンベイ</title>
+<meta name="description" content="空気が乾き、風が冷たくなる季節。マヌカハニー グリーンベイが提案する、今日からはじめる3つの習慣とシーズンクーポン。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Kaisei+Opti:wght@400;500;700&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #fff3d4;
+    --bg-deep: #fbe7c4;
+    --ink: #3a2208;
+    --ink-soft: #6b4620;
+    --honey: #ffce2b;
+    --honey-deep: #c2440b;
+    --orange: #ff6600;
+    --forest: #9a3200;
+    --forest-deep: #2b1804;
+    --cream: #fffaf0;
+    --line: rgba(43,35,24,0.14);
+    --serif: 'Kaisei Opti', serif;
+    --sans: 'Zen Kaku Gothic New', sans-serif;
+    --num: 'Josefin Sans', sans-serif;
+    --topbar-h: 44px;
+  }
+  @media (max-width: 860px){ :root{ --topbar-h: 56px; } }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{ max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  section{ position:relative; }
+
+  /* ---------- photo placeholder ---------- */
+  .photo-ph{
+    background:
+      repeating-linear-gradient(135deg, rgba(194,68,11,0.12) 0 2px, transparent 2px 18px),
+      linear-gradient(160deg, #ffe2a6, #ffc978);
+    border: 1px solid rgba(194,68,11,0.35);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--honey-deep);
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+  .photo-ph span{ background: rgba(255,250,240,0.75); padding: 6px 14px; border-radius: 2px; }
+
+  /* ---------- top coupon bar ---------- */
+  .topbar{
+    position: fixed; top:0; left:0; right:0; z-index: 60;
+    height: var(--topbar-h);
+    background: var(--honey-deep);
+    display:flex; align-items:center; justify-content:center;
+    transition: background 0.25s ease;
+  }
+  .topbar:hover{ background: var(--forest-deep); }
+  .topbar a{
+    display:flex; align-items:center; gap:10px;
+    color: #fdf6e6; font-size: 13px; letter-spacing: 0.04em;
+  }
+  .topbar a span{
+    font-family: var(--num); font-weight:700; font-size:14px; color:var(--honey);
+    letter-spacing:0.02em;
+  }
+  @media (max-width: 860px){
+    .topbar a{ flex-direction:column; gap:2px; font-size:11.5px; text-align:center; padding:0 20px; }
+    .topbar a span{ font-size:13px; }
+  }
+
+  /* ---------- header ---------- */
+  .siteheader{
+    position: fixed; top: var(--topbar-h); left:0; right:0; z-index: 50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 40px;
+    background: rgba(43,24,4,0.88);
+    backdrop-filter: blur(6px);
+  }
+  .siteheader .logo{ font-family: var(--serif); font-size: 15px; letter-spacing: 0.12em; color:#fff; }
+  .siteheader nav a{ font-size: 12px; color:#fff; letter-spacing:0.08em; margin-left: 24px; }
+  @media (max-width: 720px){ .siteheader nav{ display:none; } .siteheader{ padding: 18px 20px; } }
+
+  /* ---------- FV ---------- */
+  .fv{
+    min-height: 100svh;
+    background: linear-gradient(175deg, var(--orange) 0%, var(--forest) 45%, var(--forest-deep) 100%);
+    color: #fdf6e6;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding: calc(160px + var(--topbar-h)) 0 0 0;
+    overflow:hidden;
+  }
+  .fv-inner{
+    width:100%; max-width:1180px; margin:0 auto;
+    padding: 0 40px 72px;
+    display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items:end;
+  }
+  .fv-eyebrow{
+    font-family: var(--num); font-size: 13px; letter-spacing: 0.32em; text-transform:uppercase;
+    color: var(--honey); margin-bottom: 28px; display:flex; align-items:center; gap:14px;
+  }
+  .fv-eyebrow::before{ content:""; width:34px; height:1px; background:var(--honey); display:inline-block; }
+  .fv h1{
+    font-family: var(--serif); font-weight:500;
+    font-size: clamp(40px, 6.2vw, 84px);
+    line-height: 1.32;
+    letter-spacing: 0.02em;
+  }
+  .fv h1 em{ font-style:normal; color:var(--honey); }
+  .fv-sub{
+    margin-top: 30px; font-size: 16px; color: #fcebc9; max-width: 30em; line-height:2;
+  }
+  .fv-side{
+    display:flex; flex-direction:column; align-items:flex-start; gap:20px;
+  }
+  .fv-photo{ width:100%; aspect-ratio: 4/5; border-radius: 2px; }
+  @media (max-width: 860px){
+    .fv{ padding-top: calc(120px + var(--topbar-h)); }
+    .fv-inner{ grid-template-columns: 1fr; padding-bottom: 48px; gap: 36px; }
+    .fv-side{ order:-1; }
+    .fv-photo{ aspect-ratio: 16/10; }
+    .fv h1{ font-size: clamp(32px, 9vw, 44px); line-height:1.5; }
+  }
+
+  .fv-scroll{
+    position:absolute; right: 40px; bottom: 26px;
+    writing-mode: vertical-rl; font-family: var(--num); font-size:11px; letter-spacing:0.3em;
+    color: var(--honey); display:flex; align-items:center; gap:10px;
+  }
+  .fv-scroll::after{ content:""; width:1px; height:46px; background:var(--honey); }
+  @media (max-width: 860px){ .fv-scroll{ display:none; } }
+
+  /* ---------- section label ---------- */
+  .label{
+    font-family: var(--num); font-size:12px; letter-spacing:0.3em; color: var(--honey-deep);
+    text-transform:uppercase; margin-bottom: 18px;
+  }
+
+  /* ---------- lead / story ---------- */
+  .lead{
+    padding: 150px 0 110px;
+  }
+  .lead .wrap{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items:start; }
+  .lead h2{
+    font-family: var(--serif); font-weight:500; font-size: clamp(26px, 3vw, 36px); line-height:1.7;
+  }
+  .lead p{ color: var(--ink-soft); font-size:15.5px; margin-top: 22px; }
+  .lead p + p{ margin-top: 16px; }
+  @media (max-width: 860px){
+    .lead{ padding: 96px 0 70px; }
+    .lead .wrap{ grid-template-columns: 1fr; gap: 30px; padding: 0 20px; }
+  }
+
+  /* ---------- habits ---------- */
+  .habits{ background: var(--bg-deep); padding: 120px 0; }
+  .habits .head{ padding: 0 0 70px; max-width: 640px; }
+  .habits .head h2{ font-family: var(--serif); font-weight:500; font-size: clamp(28px,3.4vw,42px); line-height:1.6; }
+  .habit-row{
+    display:grid; grid-template-columns: 120px 1fr 1fr; gap: 40px; align-items:center;
+    padding: 48px 0; border-top: 1px solid var(--line);
+  }
+  .habit-row:last-child{ border-bottom: 1px solid var(--line); }
+  .habit-num{ font-family: var(--num); font-size: 56px; color: var(--honey); font-weight:300; }
+  .habit-text h3{ font-family: var(--serif); font-size: 21px; font-weight:500; margin-bottom: 14px; }
+  .habit-text p{ color: var(--ink-soft); font-size: 14.5px; }
+  .habit-photo{ aspect-ratio: 3/2; }
+  .habit-row:nth-child(even) .habit-photo{ order:-1; }
+  @media (max-width: 860px){
+    .habits{ padding: 80px 0; }
+    .habits .wrap{ padding: 0 20px; }
+    .habit-row{ grid-template-columns: 1fr; gap: 18px; padding: 36px 0; }
+    .habit-num{ font-size: 40px; }
+    .habit-row:nth-child(even) .habit-photo{ order:0; }
+  }
+
+  /* ---------- grade / spec ---------- */
+  .grade{ padding: 130px 0; }
+  .grade .head{ max-width: 620px; margin-bottom: 56px; }
+  .grade .head h2{ font-family: var(--serif); font-weight:500; font-size: clamp(26px,3.2vw,36px); line-height:1.7; }
+  .grade .head p{ color: var(--ink-soft); font-size: 14.5px; margin-top:18px; }
+  .product-row{ display:grid; grid-template-columns: repeat(5, 1fr); gap:20px; margin-top:10px; }
+  .product-card{
+    display:flex; flex-direction:column; text-decoration:none; color:inherit;
+    background: var(--cream); border:1px solid var(--line); border-radius:2px; overflow:hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .product-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(58,34,8,0.14); }
+  .product-photo{ aspect-ratio: 3/2; background: var(--bg-deep); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .product-photo img{ width:100%; height:100%; object-fit:cover; object-position:center; transition: transform 0.4s ease; }
+  .product-card:hover .product-photo img{ transform: scale(1.05); }
+  .product-info{ padding: 16px 16px 20px; border-top:1px solid var(--line); }
+  .product-grade{ font-family: var(--num); font-size:11px; letter-spacing:0.1em; color: var(--honey-deep); text-transform:uppercase; }
+  .product-info h3{ font-family: var(--serif); font-size:14px; font-weight:500; margin-top:6px; line-height:1.5; }
+  .product-price{ font-family: var(--num); font-size:16px; color: var(--ink); margin-top:8px; }
+  .product-link{ display:inline-block; margin-top:10px; font-size:11px; color: var(--honey-deep); border-bottom:1px solid var(--honey-deep); padding-bottom:2px; }
+  .note{ margin-top: 26px; font-size:12.5px; color: var(--ink-soft); }
+  @media (max-width: 980px){
+    .product-row{ grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 860px){
+    .grade{ padding: 80px 0; }
+    .grade .wrap{ padding: 0 20px; }
+  }
+  @media (max-width: 560px){
+    .product-row{ grid-template-columns: repeat(2, 1fr); gap:14px; }
+  }
+
+  /* ---------- recipes ---------- */
+  .recipes{ background: var(--bg-deep); padding: 120px 0; }
+  .recipes .head{ max-width: 640px; margin-bottom: 56px; }
+  .recipes .head h2{ font-family: var(--serif); font-weight:500; font-size: clamp(26px,3.2vw,36px); line-height:1.7; }
+  .recipes .head p{ color: var(--ink-soft); font-size: 14.5px; margin-top:18px; }
+  .recipe-row{ display:grid; grid-template-columns: repeat(5, 1fr); gap:22px; }
+  .recipe-card{ text-decoration:none; color:inherit; display:block; }
+  .recipe-photo{ aspect-ratio: 1600/2843; overflow:hidden; border-radius:2px; background:var(--cream); border:1px solid var(--line); }
+  .recipe-photo img{ width:100%; height:100%; object-fit:cover; transition: transform 0.4s ease; display:block; }
+  .recipe-card:hover .recipe-photo img{ transform: scale(1.06); }
+  .recipe-card h3{ font-family: var(--serif); font-size:15px; font-weight:500; margin-top:14px; line-height:1.6; }
+  .recipe-card span{ display:inline-block; margin-top:6px; font-size:11.5px; color: var(--honey-deep); }
+  @media (max-width: 980px){
+    .recipe-row{ grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 860px){
+    .recipes{ padding: 80px 0; }
+    .recipes .wrap{ padding: 0 20px; }
+  }
+  @media (max-width: 560px){
+    .recipe-row{ grid-template-columns: repeat(2, 1fr); gap:14px; }
+    .recipe-card h3{ font-size:13.5px; }
+  }
+
+  /* ---------- gift ---------- */
+  .gift{
+    background: var(--forest-deep); color:#f4ead0; padding: 130px 0;
+    display:grid; grid-template-columns: 1fr 1fr;
+  }
+  .gift-photo{ min-height: 480px; background: linear-gradient(160deg, var(--forest), var(--forest-deep)); }
+  .gift-photo.photo-ph{ border:none; color:var(--honey); }
+  .gift-text{ display:flex; flex-direction:column; justify-content:center; padding: 0 60px; }
+  .gift-text h2{ font-family: var(--serif); font-weight:500; font-size: clamp(26px,3vw,38px); line-height:1.7; }
+  .gift-text p{ margin-top: 24px; font-size:14.5px; color:#e3c299; max-width: 30em; }
+  @media (max-width: 860px){
+    .gift{ grid-template-columns: 1fr; padding:0; }
+    .gift-photo{ min-height: 260px; }
+    .gift-text{ padding: 56px 20px; }
+  }
+
+  /* ---------- coupon ---------- */
+  .coupon{ padding: 140px 0 130px; text-align:center; }
+  .coupon .label{ justify-content:center; display:flex; }
+  .coupon h2{
+    font-family: var(--serif); font-weight:500; font-size: clamp(30px,4.2vw,50px); line-height:1.5;
+    max-width: 16em; margin: 0 auto;
+  }
+  .coupon-box{
+    margin: 56px auto 0; max-width: 520px;
+    border: 1px solid var(--honey-deep); border-radius: 2px;
+    padding: 44px 40px; background: var(--cream);
+    position:relative;
+  }
+  .coupon-box::before, .coupon-box::after{
+    content:""; position:absolute; top:0; bottom:0; width:1px;
+    background: repeating-linear-gradient(to bottom, var(--honey-deep) 0 6px, transparent 6px 14px);
+  }
+  .coupon-code{
+    font-family: var(--num); font-size: 34px; letter-spacing: 0.14em; color: var(--honey-deep);
+    padding: 18px 0; border-top:1px dashed var(--line); border-bottom:1px dashed var(--line); margin: 20px 0;
+  }
+  .coupon-meta{ font-size:13px; color: var(--ink-soft); line-height:1.9; }
+  .cta{
+    display:inline-block; margin-top: 34px; padding: 17px 48px;
+    background: var(--honey-deep); color: #fdf6e6; font-size:14px; letter-spacing:0.1em;
+    border-radius: 2px; transition: background 0.25s ease;
+  }
+  .cta:hover{ background: var(--forest-deep); }
+  @media (max-width: 860px){
+    .coupon{ padding: 90px 0 90px; }
+    .coupon .wrap{ padding: 0 20px; }
+    .coupon-box{ padding: 34px 22px; margin-top:40px; }
+    .coupon-code{ font-size: 26px; letter-spacing:0.08em; }
+  }
+
+  /* ---------- brand strip ---------- */
+  .brandstrip{
+    padding: 90px 0; border-top: 1px solid var(--line);
+    display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:center;
+  }
+  .brandstrip h3{ font-family: var(--serif); font-size: 22px; font-weight:500; line-height:1.8; }
+  .brandstrip p{ color: var(--ink-soft); font-size: 13.5px; margin-top:16px; }
+  @media (max-width: 860px){ .brandstrip{ grid-template-columns:1fr; padding: 60px 20px; gap:24px; } }
+
+  /* ---------- footer ---------- */
+  footer{ background: var(--forest-deep); color: #e3c299; padding: 60px 0 40px; }
+  footer .wrap{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 24px; }
+  footer .fnote{ font-size: 11.5px; line-height:2; max-width: 640px; color: #bf9868; }
+  footer .fname{ font-family: var(--serif); font-size:15px; color:#f4ead0; }
+  @media (max-width: 860px){ footer .wrap{ padding: 0 20px; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="#coupon">冬を乗り切る、シーズンクーポン配布中 <span>最大30%OFF</span></a>
+</div>
+
+<header class="siteheader">
+  <div class="logo">MANUKA HONEY GREEN BAY</div>
+  <nav>
+    <a href="#habits">習慣</a>
+    <a href="#grade">商品</a>
+    <a href="#recipes">レシピ</a>
+    <a href="#coupon">クーポン</a>
+  </nav>
+</header>
+
+<!-- ================= FV ================= -->
+<section class="fv">
+  <div class="fv-inner">
+    <div>
+      <p class="fv-eyebrow">Season Habit / 2026 Winter</p>
+      <h1>マヌカハニーと、<br>迎える<em>季節</em>。</h1>
+      <p class="fv-sub">空気が乾いて、風が冷たくなる頃。<br>今年も、スプーン一杯からはじめよう。</p>
+    </div>
+    <div class="fv-side">
+      <div class="fv-photo" style="overflow:hidden; border:1px solid rgba(58,34,8,0.12);">
+        <img src="images/fv-hero.jpg" alt="マヌカハニー グリーンベイ 季節の習慣" style="width:100%; height:100%; object-fit:cover; object-position:center;">
+      </div>
+    </div>
+  </div>
+  <div class="fv-scroll">SCROLL</div>
+</section>
+
+<!-- ================= LEAD ================= -->
+<section class="lead">
+  <div class="wrap">
+    <div>
+      <p class="label">Our Story</p>
+      <h2>ニュージーランドが、<br>大切に守ってきた蜂蜜。</h2>
+    </div>
+    <div>
+      <p>マヌカハニーは、ニュージーランドの先住民マオリの人々に古くから親しまれてきた、マヌカの木から採れる希少なはちみつです。マヌカの花が咲く時期は短く、天候にも左右されるため、収穫できる量は決して多くありません。</p>
+      <p>グリーンベイでは、現地の生産者と直接つながり、品質管理された環境で採取・検査されたマヌカハニーだけを、皆さまのもとへお届けしています。空気が乾き、季節の変わり目を感じるこの時期。今年も変わらず、丁寧に作られた一瓶をお届けします。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HABITS ================= -->
+<section class="habits" id="habits">
+  <div class="wrap">
+    <div class="head">
+      <p class="label">3 Habits</p>
+      <h2>今日からできる、<br>3つの習慣。</h2>
+    </div>
+
+    <div class="habit-row">
+      <div class="habit-num">01</div>
+      <div class="habit-text">
+        <h3>朝のスプーン一杯</h3>
+        <p>そのまま、ひとさじ。特別な準備はいりません。忙しい朝も、これひとつで一日をはじめる習慣に。</p>
+      </div>
+      <div class="photo-ph habit-photo"><span>商品写真を挿入</span></div>
+    </div>
+
+    <div class="habit-row">
+      <div class="habit-num">02</div>
+      <div class="habit-text">
+        <h3>温かい飲み物に溶かして</h3>
+        <p>白湯や紅茶にゆっくり溶かして。風味や香りをいかすために、熱々ではなくやさしい温度でとかすのがポイントです。空気が乾燥するこの季節、ほっとひと息つく時間に寄り添います。</p>
+      </div>
+      <div class="habit-photo" style="overflow:hidden;"><img src="images/habit-02.jpg" alt="紅茶にマヌカハニーを溶かして" style="width:100%; height:100%; object-fit:cover;"></div>
+    </div>
+
+    <div class="habit-row">
+      <div class="habit-num">03</div>
+      <div class="habit-text">
+        <h3>大切な人への一本に</h3>
+        <p>家族や友人、日々頑張っている人へ。気遣いの気持ちを、この季節の贈り物にして届けませんか。</p>
+      </div>
+      <div class="photo-ph habit-photo"><span>商品写真を挿入</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GRADE ================= -->
+<section class="grade" id="grade">
+  <div class="wrap">
+    <div class="head">
+      <p class="label">MGO Grade</p>
+      <h2>MGO(メチルグリオキサール)<br>グレードについて</h2>
+      <p>MGOは、マヌカハニーに含まれる成分の含有量を示す指標です。数値が大きいほど含有量が多く、風味もより濃厚になる傾向があります。用途や好みに合わせてお選びください。</p>
+    </div>
+    <div class="product-row">
+      <a class="product-card" href="https://item.rakuten.co.jp/manuka/gb05/" target="_blank" rel="noopener">
+        <div class="product-photo"><img src="images/product-umf05.jpg" alt="プレミアムマヌカハニー UMF5+ MGO83+ 250g"></div>
+        <div class="product-info">
+          <span class="product-grade">UMF5+ / MGO83+</span>
+          <h3>プレミアムマヌカハニー 250g</h3>
+          <p class="product-price">3,980円</p>
+          <span class="product-link">商品ページを見る →</span>
+        </div>
+      </a>
+      <a class="product-card" href="https://item.rakuten.co.jp/manuka/gb10/" target="_blank" rel="noopener">
+        <div class="product-photo"><img src="images/product-umf10.jpg" alt="プレミアムマヌカハニー UMF10+ MGO261+ 250g"></div>
+        <div class="product-info">
+          <span class="product-grade">UMF10+ / MGO261+</span>
+          <h3>プレミアムマヌカハニー 250g</h3>
+          <p class="product-price">4,930円〜</p>
+          <span class="product-link">商品ページを見る →</span>
+        </div>
+      </a>
+      <a class="product-card" href="https://item.rakuten.co.jp/manuka/gb15/" target="_blank" rel="noopener">
+        <div class="product-photo"><img src="images/product-umf15.jpg" alt="プレミアムマヌカハニー UMF15+ MGO512+ 250g"></div>
+        <div class="product-info">
+          <span class="product-grade">UMF15+ / MGO512+</span>
+          <h3>プレミアムマヌカハニー 250g</h3>
+          <p class="product-price">5,980円〜</p>
+          <span class="product-link">商品ページを見る →</span>
+        </div>
+      </a>
+      <a class="product-card" href="https://item.rakuten.co.jp/manuka/gb20/" target="_blank" rel="noopener">
+        <div class="product-photo"><img src="images/product-umf20.jpg" alt="プレミアムマヌカハニー UMF20+ MGO826+ 250g"></div>
+        <div class="product-info">
+          <span class="product-grade">UMF20+ / MGO826+</span>
+          <h3>プレミアムマヌカハニー 250g</h3>
+          <p class="product-price">9,480円〜</p>
+          <span class="product-link">商品ページを見る →</span>
+        </div>
+      </a>
+      <a class="product-card" href="https://item.rakuten.co.jp/manuka/gb22/" target="_blank" rel="noopener">
+        <div class="product-photo"><img src="images/product-umf22.jpg" alt="プレミアムマヌカハニー UMF22+ MGO968+ 250g"></div>
+        <div class="product-info">
+          <span class="product-grade">UMF22+ / MGO968+</span>
+          <h3>プレミアムマヌカハニー 250g</h3>
+          <p class="product-price">12,800円</p>
+          <span class="product-link">商品ページを見る →</span>
+        </div>
+      </a>
+    </div>
+    <p class="note">※MGO数値は成分の含有量を示すものであり、特定の効果・効能を示すものではありません。価格は変動する場合があります。</p>
+  </div>
+</section>
+
+<!-- ================= RECIPES ================= -->
+<section class="recipes" id="recipes">
+  <div class="wrap">
+    <div class="head">
+      <p class="label">Green Bay Kitchen</p>
+      <h2>マヌカハニーのある、<br>季節のレシピ。</h2>
+      <p>マヌカハニーを毎日の習慣にする中で、時々お料理に使ってみるのもおすすめです。アレンジ次第で、楽しみ方はまだまだ広がります。気になる一品をタップして、作り方をチェックしてみてください。</p>
+    </div>
+    <div class="recipe-row">
+      <a class="recipe-card" href="https://www.rakuten.co.jp/manuka/contents/manuka-recipe/Japan/tokushima-sudachi/" target="_blank" rel="noopener">
+        <div class="recipe-photo"><img src="https://greentuushou-arch.github.io/greenbay-kitchen-recipe-magazine/images/sudachi.jpg" alt="徳島・すだちそうめん"></div>
+        <h3>徳島・すだちそうめん</h3>
+        <span>レシピを見る →</span>
+      </a>
+      <a class="recipe-card" href="https://www.rakuten.co.jp/manuka/contents/manuka-recipe/japan/miyagi-zunda/" target="_blank" rel="noopener">
+        <div class="recipe-photo"><img src="https://greentuushou-arch.github.io/greenbay-kitchen-recipe-magazine/images/zunda.jpg" alt="宮城・ずんだ"></div>
+        <h3>宮城・ずんだ</h3>
+        <span>レシピを見る →</span>
+      </a>
+      <a class="recipe-card" href="https://www.rakuten.co.jp/manuka/contents/manuka-recipe/japan/saitama-gyoda-furai/" target="_blank" rel="noopener">
+        <div class="recipe-photo"><img src="https://greentuushou-arch.github.io/greenbay-kitchen-recipe-magazine/images/gyoda.jpg" alt="埼玉・行田フライ"></div>
+        <h3>埼玉・行田フライ</h3>
+        <span>レシピを見る →</span>
+      </a>
+      <a class="recipe-card" href="https://www.rakuten.co.jp/manuka/contents/manuka-recipe/japan/gunma-yakimanju/" target="_blank" rel="noopener">
+        <div class="recipe-photo"><img src="https://greentuushou-arch.github.io/greenbay-kitchen-recipe-magazine/images/yakimanju.jpg" alt="群馬・焼きまんじゅう"></div>
+        <h3>群馬・焼きまんじゅう</h3>
+        <span>レシピを見る →</span>
+      </a>
+      <a class="recipe-card" href="https://www.rakuten.co.jp/manuka/contents/manuka-recipe-lemon/" target="_blank" rel="noopener">
+        <div class="recipe-photo"><img src="https://greentuushou-arch.github.io/greenbay-kitchen-recipe-magazine/images/lemon.jpg" alt="マヌカハニーレモン漬け"></div>
+        <h3>マヌカハニーレモン漬け</h3>
+        <span>レシピを見る →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GIFT ================= -->
+<section class="gift">
+  <div class="gift-photo" style="overflow:hidden;"><img src="images/gift.jpg" alt="大切な人へマヌカハニーを贈る" style="width:100%; height:100%; object-fit:cover;"></div>
+  <div class="gift-text">
+    <p class="label" style="color:var(--honey);">For Someone Special</p>
+    <h2>大切な人への、<br>今季の贈り物に。</h2>
+    <p>季節の変わり目、相手を気づかう気持ちをかたちにして。グリーンベイのギフトセットは、贈る相手を想いながら選べるラインナップをご用意しています。</p>
+  </div>
+</section>
+
+<!-- ================= COUPON ================= -->
+<section class="coupon" id="coupon">
+  <div class="wrap">
+    <p class="label">Season Habit Coupon</p>
+    <h2>この季節だけの、<br>はじめる一歩を。</h2>
+    <div class="coupon-box">
+      <div class="coupon-meta">対象商品ご購入で使える、期間限定30%OFFクーポン</div>
+      <div class="coupon-code">[ CPN-XXXXXX ]</div>
+      <div class="coupon-meta">
+        利用期間:[ 2026年◯月◯日 〜 ◯月◯日 ]<br>
+        対象商品:[ マヌカハニーシリーズ ]<br>
+        ※クーポンコード・利用条件は店舗ページの表記が優先されます
+      </div>
+    </div>
+    <a class="cta" href="#">店舗ページでクーポンを見る</a>
+  </div>
+</section>
+
+<!-- ================= BRAND STRIP ================= -->
+<section class="brandstrip">
+  <div class="wrap" style="display:contents;">
+    <div>
+      <p class="label">Since Our Founding</p>
+      <h3>創業から20年以上、<br>マヌカハニーの専門店として。</h3>
+    </div>
+    <div>
+      <p>グリーンベイは、マヌカハニーを専門に取り扱う楽天市場の店舗です。品質と正しい情報を大切に、季節を通じて安心してお選びいただける一本をお届けしています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fname">MANUKA HONEY GREEN BAY</div>
+    <p class="fnote">本ページは食品としてのマヌカハニーの一般的な情報・楽しみ方をご紹介するものであり、特定の症状・疾病の予防または治療を目的とした表示ではありません。効果・効能を保証するものではありませんので、あらかじめご了承ください。&copy; Manuka Honey Green Bay</p>
+  </div>
+</footer>
+
+</body>
+</html>
