@@ -7,7 +7,7 @@
 <meta name="description" content="空気が乾き、風が冷たくなる季節。マヌカハニー グリーンベイが提案する、今日からはじめる3つの習慣とシーズンクーポン。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Kaisei+Opti:wght@400;500;700&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg: #fff3d4;
@@ -21,9 +21,9 @@
     --forest-deep: #2b1804;
     --cream: #fffaf0;
     --line: rgba(43,35,24,0.14);
-    --serif: 'Kaisei Opti', serif;
-    --sans: 'Zen Kaku Gothic New', sans-serif;
-    --num: 'Josefin Sans', sans-serif;
+    --serif: 'Noto Sans JP', sans-serif;
+    --sans: 'Noto Sans JP', sans-serif;
+    --num: 'Jost', sans-serif;
     --topbar-h: 44px;
   }
   @media (max-width: 860px){ :root{ --topbar-h: 56px; } }
@@ -51,7 +51,7 @@
     display:flex; align-items:center; justify-content:center;
     color: var(--honey-deep);
     font-family: var(--sans);
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.08em;
   }
   .photo-ph span{ background: rgba(255,250,240,0.75); padding: 6px 14px; border-radius: 2px; }
@@ -67,15 +67,15 @@
   .topbar:hover{ background: var(--forest-deep); }
   .topbar a{
     display:flex; align-items:center; gap:10px;
-    color: #fdf6e6; font-size: 13px; letter-spacing: 0.04em;
+    color: #fdf6e6; font-size: 14.5px; letter-spacing: 0.04em;
   }
   .topbar a span{
-    font-family: var(--num); font-weight:700; font-size:14px; color:var(--honey);
+    font-family: var(--num); font-weight:700; font-size:15.5px; color:var(--honey);
     letter-spacing:0.02em;
   }
   @media (max-width: 860px){
-    .topbar a{ flex-direction:column; gap:2px; font-size:11.5px; text-align:center; padding:0 20px; }
-    .topbar a span{ font-size:13px; }
+    .topbar a{ flex-direction:column; gap:2px; font-size:12.5px; text-align:center; padding:0 20px; }
+    .topbar a span{ font-size:14px; }
   }
 
   /* ---------- header ---------- */
@@ -86,8 +86,8 @@
     background: rgba(43,24,4,0.88);
     backdrop-filter: blur(6px);
   }
-  .siteheader .logo{ font-family: var(--serif); font-size: 15px; letter-spacing: 0.12em; color:#fff; }
-  .siteheader nav a{ font-size: 12px; color:#fff; letter-spacing:0.08em; margin-left: 24px; }
+  .siteheader .logo{ font-family: var(--serif); font-size: 16px; letter-spacing: 0.12em; color:#fff; }
+  .siteheader nav a{ font-size: 13px; color:#fff; letter-spacing:0.08em; margin-left: 24px; }
   @media (max-width: 720px){ .siteheader nav{ display:none; } .siteheader{ padding: 18px 20px; } }
 
   /* ---------- FV ---------- */
@@ -105,19 +105,19 @@
     display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items:end;
   }
   .fv-eyebrow{
-    font-family: var(--num); font-size: 13px; letter-spacing: 0.32em; text-transform:uppercase;
+    font-family: var(--num); font-size: 14px; letter-spacing: 0.32em; text-transform:uppercase;
     color: var(--honey); margin-bottom: 28px; display:flex; align-items:center; gap:14px;
   }
   .fv-eyebrow::before{ content:""; width:34px; height:1px; background:var(--honey); display:inline-block; }
   .fv h1{
-    font-family: var(--serif); font-weight:500;
+    font-family: var(--serif); font-weight:700;
     font-size: clamp(40px, 6.2vw, 84px);
     line-height: 1.32;
     letter-spacing: 0.02em;
   }
   .fv h1 em{ font-style:normal; color:var(--honey); }
   .fv-sub{
-    margin-top: 30px; font-size: 16px; color: #fcebc9; max-width: 30em; line-height:2;
+    margin-top: 30px; font-size: 18px; color: #fcebc9; max-width: 30em; line-height:2;
   }
   .fv-side{
     display:flex; flex-direction:column; align-items:flex-start; gap:20px;
@@ -133,7 +133,7 @@
 
   .fv-scroll{
     position:absolute; right: 40px; bottom: 26px;
-    writing-mode: vertical-rl; font-family: var(--num); font-size:11px; letter-spacing:0.3em;
+    writing-mode: vertical-rl; font-family: var(--num); font-size:12px; letter-spacing:0.3em;
     color: var(--honey); display:flex; align-items:center; gap:10px;
   }
   .fv-scroll::after{ content:""; width:1px; height:46px; background:var(--honey); }
@@ -141,7 +141,7 @@
 
   /* ---------- section label ---------- */
   .label{
-    font-family: var(--num); font-size:12px; letter-spacing:0.3em; color: var(--honey-deep);
+    font-family: var(--num); font-size:13px; letter-spacing:0.3em; color: var(--honey-deep);
     text-transform:uppercase; margin-bottom: 18px;
   }
 
@@ -151,9 +151,9 @@
   }
   .lead .wrap{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items:start; }
   .lead h2{
-    font-family: var(--serif); font-weight:500; font-size: clamp(26px, 3vw, 36px); line-height:1.7;
+    font-family: var(--serif); font-weight:700; font-size: clamp(26px, 3vw, 36px); line-height:1.7;
   }
-  .lead p{ color: var(--ink-soft); font-size:15.5px; margin-top: 22px; }
+  .lead p{ color: var(--ink-soft); font-size:17px; margin-top: 22px; }
   .lead p + p{ margin-top: 16px; }
   @media (max-width: 860px){
     .lead{ padding: 96px 0 70px; }
@@ -163,15 +163,15 @@
   /* ---------- habits ---------- */
   .habits{ background: var(--bg-deep); padding: 120px 0; }
   .habits .head{ padding: 0 0 70px; max-width: 640px; }
-  .habits .head h2{ font-family: var(--serif); font-weight:500; font-size: clamp(28px,3.4vw,42px); line-height:1.6; }
+  .habits .head h2{ font-family: var(--serif); font-weight:700; font-size: clamp(28px,3.4vw,42px); line-height:1.6; }
   .habit-row{
     display:grid; grid-template-columns: 120px 1fr 1fr; gap: 40px; align-items:center;
     padding: 48px 0; border-top: 1px solid var(--line);
   }
   .habit-row:last-child{ border-bottom: 1px solid var(--line); }
   .habit-num{ font-family: var(--num); font-size: 56px; color: var(--honey); font-weight:300; }
-  .habit-text h3{ font-family: var(--serif); font-size: 21px; font-weight:500; margin-bottom: 14px; }
-  .habit-text p{ color: var(--ink-soft); font-size: 14.5px; }
+  .habit-text h3{ font-family: var(--serif); font-size: 22px; font-weight:700; margin-bottom: 14px; }
+  .habit-text p{ color: var(--ink-soft); font-size: 16px; }
   .habit-photo{ aspect-ratio: 3/2; }
   .habit-row:nth-child(even) .habit-photo{ order:-1; }
   @media (max-width: 860px){
@@ -185,8 +185,8 @@
   /* ---------- grade / spec ---------- */
   .grade{ padding: 130px 0; }
   .grade .head{ max-width: 620px; margin-bottom: 56px; }
-  .grade .head h2{ font-family: var(--serif); font-weight:500; font-size: clamp(26px,3.2vw,36px); line-height:1.7; }
-  .grade .head p{ color: var(--ink-soft); font-size: 14.5px; margin-top:18px; }
+  .grade .head h2{ font-family: var(--serif); font-weight:700; font-size: clamp(26px,3.2vw,36px); line-height:1.7; }
+  .grade .head p{ color: var(--ink-soft); font-size: 16px; margin-top:18px; }
   .product-row{ display:grid; grid-template-columns: repeat(5, 1fr); gap:20px; margin-top:10px; }
   .product-card{
     display:flex; flex-direction:column; text-decoration:none; color:inherit;
@@ -198,11 +198,11 @@
   .product-photo img{ width:100%; height:100%; object-fit:cover; object-position:center; transition: transform 0.4s ease; }
   .product-card:hover .product-photo img{ transform: scale(1.05); }
   .product-info{ padding: 16px 16px 20px; border-top:1px solid var(--line); }
-  .product-grade{ font-family: var(--num); font-size:11px; letter-spacing:0.1em; color: var(--honey-deep); text-transform:uppercase; }
-  .product-info h3{ font-family: var(--serif); font-size:14px; font-weight:500; margin-top:6px; line-height:1.5; }
-  .product-price{ font-family: var(--num); font-size:16px; color: var(--ink); margin-top:8px; }
-  .product-link{ display:inline-block; margin-top:10px; font-size:11px; color: var(--honey-deep); border-bottom:1px solid var(--honey-deep); padding-bottom:2px; }
-  .note{ margin-top: 26px; font-size:12.5px; color: var(--ink-soft); }
+  .product-grade{ font-family: var(--num); font-size:12px; letter-spacing:0.1em; color: var(--honey-deep); text-transform:uppercase; }
+  .product-info h3{ font-family: var(--serif); font-size:15px; font-weight:700; margin-top:6px; line-height:1.5; }
+  .product-price{ font-family: var(--num); font-size:18px; color: var(--ink); margin-top:8px; }
+  .product-link{ display:inline-block; margin-top:10px; font-size:12px; color: var(--honey-deep); border-bottom:1px solid var(--honey-deep); padding-bottom:2px; }
+  .note{ margin-top: 26px; font-size:13.5px; color: var(--ink-soft); }
   @media (max-width: 980px){
     .product-row{ grid-template-columns: repeat(3, 1fr); }
   }
@@ -217,15 +217,15 @@
   /* ---------- recipes ---------- */
   .recipes{ background: var(--bg-deep); padding: 120px 0; }
   .recipes .head{ max-width: 640px; margin-bottom: 56px; }
-  .recipes .head h2{ font-family: var(--serif); font-weight:500; font-size: clamp(26px,3.2vw,36px); line-height:1.7; }
-  .recipes .head p{ color: var(--ink-soft); font-size: 14.5px; margin-top:18px; }
+  .recipes .head h2{ font-family: var(--serif); font-weight:700; font-size: clamp(26px,3.2vw,36px); line-height:1.7; }
+  .recipes .head p{ color: var(--ink-soft); font-size: 16px; margin-top:18px; }
   .recipe-row{ display:grid; grid-template-columns: repeat(5, 1fr); gap:22px; }
   .recipe-card{ text-decoration:none; color:inherit; display:block; }
   .recipe-photo{ aspect-ratio: 1600/2843; overflow:hidden; border-radius:2px; background:var(--cream); border:1px solid var(--line); }
   .recipe-photo img{ width:100%; height:100%; object-fit:cover; transition: transform 0.4s ease; display:block; }
   .recipe-card:hover .recipe-photo img{ transform: scale(1.06); }
-  .recipe-card h3{ font-family: var(--serif); font-size:15px; font-weight:500; margin-top:14px; line-height:1.6; }
-  .recipe-card span{ display:inline-block; margin-top:6px; font-size:11.5px; color: var(--honey-deep); }
+  .recipe-card h3{ font-family: var(--serif); font-size:16px; font-weight:700; margin-top:14px; line-height:1.6; }
+  .recipe-card span{ display:inline-block; margin-top:6px; font-size:12.5px; color: var(--honey-deep); }
   @media (max-width: 980px){
     .recipe-row{ grid-template-columns: repeat(3, 1fr); }
   }
@@ -235,7 +235,7 @@
   }
   @media (max-width: 560px){
     .recipe-row{ grid-template-columns: repeat(2, 1fr); gap:14px; }
-    .recipe-card h3{ font-size:13.5px; }
+    .recipe-card h3{ font-size:14.5px; }
   }
 
   /* ---------- gift ---------- */
@@ -246,8 +246,8 @@
   .gift-photo{ min-height: 480px; background: linear-gradient(160deg, var(--forest), var(--forest-deep)); }
   .gift-photo.photo-ph{ border:none; color:var(--honey); }
   .gift-text{ display:flex; flex-direction:column; justify-content:center; padding: 0 60px; }
-  .gift-text h2{ font-family: var(--serif); font-weight:500; font-size: clamp(26px,3vw,38px); line-height:1.7; }
-  .gift-text p{ margin-top: 24px; font-size:14.5px; color:#e3c299; max-width: 30em; }
+  .gift-text h2{ font-family: var(--serif); font-weight:700; font-size: clamp(26px,3vw,38px); line-height:1.7; }
+  .gift-text p{ margin-top: 24px; font-size:16px; color:#e3c299; max-width: 30em; }
   @media (max-width: 860px){
     .gift{ grid-template-columns: 1fr; padding:0; }
     .gift-photo{ min-height: 260px; }
@@ -258,7 +258,7 @@
   .coupon{ padding: 140px 0 130px; text-align:center; }
   .coupon .label{ justify-content:center; display:flex; }
   .coupon h2{
-    font-family: var(--serif); font-weight:500; font-size: clamp(30px,4.2vw,50px); line-height:1.5;
+    font-family: var(--serif); font-weight:700; font-size: clamp(30px,4.2vw,50px); line-height:1.5;
     max-width: 16em; margin: 0 auto;
   }
   .coupon-box{
@@ -275,10 +275,10 @@
     font-family: var(--num); font-size: 34px; letter-spacing: 0.14em; color: var(--honey-deep);
     padding: 18px 0; border-top:1px dashed var(--line); border-bottom:1px dashed var(--line); margin: 20px 0;
   }
-  .coupon-meta{ font-size:13px; color: var(--ink-soft); line-height:1.9; }
+  .coupon-meta{ font-size:14.5px; color: var(--ink-soft); line-height:1.9; }
   .cta{
     display:inline-block; margin-top: 34px; padding: 17px 48px;
-    background: var(--honey-deep); color: #fdf6e6; font-size:14px; letter-spacing:0.1em;
+    background: var(--honey-deep); color: #fdf6e6; font-size:15.5px; letter-spacing:0.1em;
     border-radius: 2px; transition: background 0.25s ease;
   }
   .cta:hover{ background: var(--forest-deep); }
@@ -294,15 +294,15 @@
     padding: 90px 0; border-top: 1px solid var(--line);
     display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:center;
   }
-  .brandstrip h3{ font-family: var(--serif); font-size: 22px; font-weight:500; line-height:1.8; }
-  .brandstrip p{ color: var(--ink-soft); font-size: 13.5px; margin-top:16px; }
+  .brandstrip h3{ font-family: var(--serif); font-size: 23px; font-weight:700; line-height:1.8; }
+  .brandstrip p{ color: var(--ink-soft); font-size: 15px; margin-top:16px; }
   @media (max-width: 860px){ .brandstrip{ grid-template-columns:1fr; padding: 60px 20px; gap:24px; } }
 
   /* ---------- footer ---------- */
   footer{ background: var(--forest-deep); color: #e3c299; padding: 60px 0 40px; }
   footer .wrap{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap: 24px; }
-  footer .fnote{ font-size: 11.5px; line-height:2; max-width: 640px; color: #bf9868; }
-  footer .fname{ font-family: var(--serif); font-size:15px; color:#f4ead0; }
+  footer .fnote{ font-size: 12.5px; line-height:2; max-width: 640px; color: #bf9868; }
+  footer .fname{ font-family: var(--serif); font-size:16px; color:#f4ead0; }
   @media (max-width: 860px){ footer .wrap{ padding: 0 20px; } }
 </style>
 </head>
